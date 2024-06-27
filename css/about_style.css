@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --bg-color:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+}
+section{
+    min-heigh:100vh;
+    padding:10rem 9% 2rem;
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2rem 9%;
+    background: var(--bg-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    font-size:2.5rem;
+    color:var(--text-color);
+    font-weight: 600;
+    cursor:default;
+
+}
+.navbar a{
+    font-size: 1.7rem;
+    color:var(--text-color);
+    margin-left:4rem;
+    transition: .5s;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display:none;
+}
+
+
+.about {
+ display: flex;
+ /* flex-direction: column; */
+ justify-content: center;
+ align-items:right;
+ /* padding-top: 10rem; */
+ gap:6rem;
+ background:var(--second-bg-color);
+ /* height: 100vh; */
+}
+.about .about-img{
+    order: 1px;
+    position:absolute;
+    left:7%;
+    top:145%;
+    transform: translateY(-50%);
+    margin-right:auto;
+    
+    
+}
+.about .about-img img {
+    
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 100%; /* Make the image round */
+    border: 10px solid white; /* Initial outer border color */
+    box-shadow: 0 0 50px 10px #0ef; /* Add glow effect */
+    background-clip: padding-box, border-box;
+    animation: blinkBorder 5s infinite alternate; /* Apply animation */
+    background: #0ef; /* Background color around the circle */
+}
+
+@keyframes blinkBorder {
+    0% {
+        border-color:transparent; /* Initial outer border color */
+    }
+    25% {
+        border-color:palevioletred; /* Change border color */
+    }
+    50% {
+        border-color:blue; /* Change border color */
+    }
+    75% {
+        border-color:forestgreen; /* Change border color */
+    }
+    100% {
+        border-color: yellow; /* Change border color */
+    }
+    
+   
+}
+.about-img img{
+    width:35vw;
+    
+}
+/*.about .about-content{
+    max-width:50%;
+    text-align:center;
+    padding-top:20px;
+    
+    margin:0 auto;
+
+}*/
+
+/* about*/
+.about-text {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top:3.5rem;
+    padding-bottom:5rem;
+    .right-about{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:2rem;
+
+        .about-item{
+            border: 3px solid var(--main-color);
+            border-radius:5px;
+            transition: all .5s ease-in-out;
+            box-shadow:1px 2px 5px rgba(0,0,0,.1);
+            &:hover{
+                cursor:default;
+                transform:translateY(-5px);
+                border:5px solid var(--second-bg-color);
+                box-shadow:1px 4px 5px rgba(0,0,0,.32)
+                
+            }
+            .abt-text{
+                padding: 1.5rem;
+                display:flex;
+                flex-direction:column;
+                .large-text{
+                    font-size:3rem;
+                    font-weight:700;
+                    color:var(--text-color);
+                 }
+                .small-text{
+                    padding-left:3rem;
+                    position:relative;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    color:var(--text-color);
+                    letter-spacing: 2px;
+                .small-text::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%; /* Adjust top position to center the line */
+                    transform: translateY(-50%); /* Center the line vertically */
+                    width: 2rem;
+                    height: 2px;
+                    background-color: var(--text-color);
+                    }
+                }
+
+            }
+        }
+    }
+    .left-about{
+        text-align: left;
+        padding-right: 5rem;
+        p{
+            margin:0;
+            line-height:3rem;
+            padding:1rem;
+            color:var(--text-color);
+            text-indent: 1.5em;
+
+        }
+        h4{
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align:left;
+        }
+    }
+
+
+  }
+  
+
+/* independed components**/
+.about .about-content{
+    text-align: center;
+    h2{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        span{
+            color:var(--main-color);
+
+        }
+        .bg-text{
+            position: absolute;
+            top:50%;
+            left:50%;
+            color:var(--main-color);
+            transition: all .5s ease-in-out;
+            z-index:-1;
+            transform: translate(-50%, -50%);
+            font-weight:800;
+            font-size: 6.3rem;
+        }
+     }
+
+    }
+.about-stats {
+    padding-bottom:1rem;
+}
+
+.about-stats .stat-title {
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.about-stats .stat-title::before {
+    content: '';
+    left: 50%;
+    width: 40%;
+    height:0.5px;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+}
+
+.about-stats .progress-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:0rem;
+    padding: 0;
+}
+
+.about-stats .progress-bars .progress-bar {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start; /* Align items vertically */
+    margin-bottom:-2rem; /* Optional: Add space between progress bars */
+    
+}
+
+.about-stats .progress-bars .progress-bar .prog-title {
+    text-transform: uppercase;
+    font-weight:500;
+    display: flex;
+    text-align: left;
+    margin:0.5rem 0; /* Reset margin */
+    padding:0rem; /* Reset padding */
+}
+
+.about-stats .progress-bars .progress-bar .progress-con {
+    flex:1; /* Take up remaining space */
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress {
+    width:75%; /* Fills the available width */
+    height:1.5rem; /* Example height */
+    background-color: var(--text-color); /* Example background color */
+    
+    position:relative;
+    padding:0;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress span {
+    display: block;
+    height:100%;
+    background-color:blue; /* Example color */
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .prog-text {
+    color: var(--second-bg-color);
+    margin:0; /* Reset margin */
+    padding:0; /* Reset padding */
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Python3 {
+    width: 90%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .Data-science {
+    width: 70%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .data-Analysis {
+    width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .data-visualization {
+    width: 65%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Machine-learning {
+    width: 75%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Deep-learning{
+    width: 60%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Web-scraping{
+    width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Apis{
+    width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .database{
+    width: 90%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .flask{
+    width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .Django{
+    width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .git{
+    width: 90%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .language{
+    width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .html{
+    width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .css{
+    width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .javascript{
+    width: 60%;
+}
+
+
+
+    
+    
+.about-content h3{
+    font-size:2.6rem;
+    /* margin:2rem 0 3rem; */
+    /* line-height:1.6; */
+    text-align:center;
+    
+}
+.about-content p{
+    font-size:2em;
+    margin:2rem 0 3rem;
+}
+  

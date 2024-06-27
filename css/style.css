@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+:root{
+    --bg-color:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+    --br-sm-2:14px;
+    --box-shadow-1:0 3px 15px rgba(0,0,0,3);
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color);
+    font-family: 'poppins',sans-serif;
+    font-size:1.1rem;
+    transition:all .5s ease-in-out;
+
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color:inherit;
+    font-family: inherit;
+}
+section{
+    min-heigh:100vh;
+    padding:10rem 9% 2rem;
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2rem 9%;
+    background: var(--bg-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    font-size:2.5rem;
+    color:var(--text-color);
+    font-weight: 600;
+    cursor:default;
+
+}
+.navbar a{
+    font-size: 1.7rem;
+    color:var(--text-color);
+    margin-left:4rem;
+    transition: .5s;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color:var(--main-color);
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display:none;
+}
+.home {
+    position:flex;
+    width: 70%;
+    justify-content:center;
+    height: 100vh;
+    background: url(images/IMG_3287.JPG) no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    align-items:center;
+    padding: 70px 10% 0;
+}
+.home .home-img{
+    position:absolute;
+    right:5%;
+    top:50%;
+    transform: translateY(-50%);
+    
+}
+.home .home-img img {
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    border-radius: 100%; /* Make the image round */
+    border: 10px solid white; /* Initial outer border color */
+    box-shadow: 0 0 50px 10px #0ef; /* Add glow effect */
+    background-clip: padding-box, border-box;
+    animation: blinkBorder 5s infinite alternate; /* Apply animation */
+    background: #0ef; /* Background color around the circle */
+}
+
+@keyframes blinkBorder {
+    0% {
+        border-color:transparent; /* Initial outer border color */
+    }
+    25% {
+        border-color:palevioletred; /* Change border color */
+    }
+    50% {
+        border-color:blue; /* Change border color */
+    }
+    75% {
+        border-color:forestgreen; /* Change border color */
+    }
+    100% {
+        border-color: yellow; /* Change border color */
+    }
+    
+   
+}
+
+/*  controlls */
+.controls{
+position:fixed;
+font-size:2.6rem;;
+z-index:15;
+top:50%;
+left:25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transform: translateY(-50%);
+.active-btn{
+    background-color: #27ae60 !important;
+    transition: all .5s ease-in-out;
+    i{
+        color:var(--text-color) !important;
+    }
+}
+.control{
+    padding:1rem;
+    cursor: pointer;
+    background-color:var(--bg-color);
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:.7rem 0;
+    box-shadow: var(--box-shadow-1);
+    /* transition: .5sec ease; */
+ 
+}
+}
+.controls a:hover{
+    background:#27ae60;
+    color: var(--second-bg-color);
+    box-shadow: 1 1 10px #27ae60;
+  }
+  .control a {
+    text-decoration: none; /* Remove underline from the anchor tag*/ 
+  }
+.home-img img{
+    widht:35vw;
+}
+.home-content h3{
+    font-size:3.2em;
+    font-weight:700;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+span{
+    color:var(--main-color)
+}
+.home-content h1{
+    font-size: 5.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 1.9rem;
+}
+.vertical-line {
+    border-left: 5px solid white; /* Adjust thickness and color as needed */
+    height: 75%; /* Adjust height as needed */
+    position: absolute;
+    left: 50px; /* Adjust the distance from the left side */
+    top: 0;
+  }
+  .home-content {
+    position: relative;
+    padding-left: 70px; /* Adjust the padding to make space for the line */
+  }
+  .website-logo a{
+        display:inline-flex;
+        justify-content:space-between;
+        align-items: center;
+        width:  4rem ;
+        height: 4rem;
+        background: transparent;
+        font-size: 4rem;
+        color:white;
+        margin:1rem 1.5rem 1rem 0;
+       
+    
+  }
+  .logo-website-container{
+    width:4rem;
+    height:4rem;
+    overflow:hidden;
+    border:.2rem solid white;
+    border-radius: 50%;
+  }
+  .logo-website-container img {
+    width: 100%;
+    height: auto;
+  }
+  .social-media a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:4rem ;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin:3rem 1.5rem 3rem 0;
+    transition: .5sec ease;
+  }
+  .social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    
+  }
+  .logo-container {
+    width: 3rem; /* Adjust as needed */
+    height: 3rem; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 50%;
+    
+  }
+  
+  .logo-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+    padding:1rem 2.8rem;
+    background:transparent;
+    color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 2rem;
+    margin:0 3rem 0rem 0;
+    font-weight: 600;
+    
+    transition: .5sec ease;
+    
+  }
+  .btn:hover{
+    background: var(--main-color);
+    color:var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: translateX(0);
+  }
